@@ -1,0 +1,147 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+@import url("https://fonts.googleapis.com/css?family=Orbitron:700,600|Inter:400");
+
+.div-wrapper {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.div-wrapper .div {
+  overflow: hidden;
+  background-image: url(../img/image.png) ;
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+}
+
+.div-wrapper .union {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: -3725px;
+  left: -10700px;
+  object-fit: cover;
+}
+
+.div-wrapper .image {
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  top: 35px;
+  left: 1322px;
+  object-fit: cover;
+}
+
+.div-wrapper .privacy-btn {
+  position: absolute;
+  width: 383px;
+  height: 96px;
+  top: 442px;
+  left: 528px;
+  object-fit: cover;
+}
+
+.div-wrapper .service-btn {
+  position: absolute;
+  width: 383px;
+  height: 96px;
+  top: 299px;
+  left: 528px;
+  object-fit: cover;
+}
+
+.div-wrapper .element {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 18px;
+  left: 28px;
+  object-fit: cover;
+}
+
+.div-wrapper .logo {
+  position: absolute;
+  width: 458px;
+  height: 128px;
+  top: 14px;
+  left: 491px;
+  object-fit: cover;
+}
+
+.div-wrapper .clost-btn {
+  position: absolute;
+  width: 218px;
+  height: 75px;
+  top: 800px;
+  left: 611px;
+  object-fit: cover;
+}
+
+.div-wrapper .group {
+  position: absolute;
+  width: 729px;
+  height: 58px;
+  top: 142px;
+  left: 356px;
+}
+
+.div-wrapper .text-wrapper {
+  position: absolute;
+  width: 727px;
+  height: 58px;
+  top: 0;
+  left: 0;
+  font-family: "Orbitron-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+.div-wrapper .overlap-group {
+  position: absolute;
+  width: 383px;
+  height: 164px;
+  top: 600px;
+  left: 528px;
+  background-image: url(../img/image14.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.div-wrapper .overlap-group .email-dongduk-ac-kr {
+  font-family: "Noto Sans KR-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 22px;
+}

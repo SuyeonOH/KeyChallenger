@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="src/main/resources/MyLikeListMapper">
+
+   <!-- myLikeList 생성 -->
+   <insert id="createLikeList" parameterType="model.MyLikeList">
+      INSERT INTO MyLikeList VALUES(ID, POSTID)
+        VALUES(#{id}, #{postId})
+   </insert> 
+   
+   <!-- 좋아요 누름 -->
+   <update id="likePost" parameterType="map">
+      UPDATE POST SET LIKECOUNT = LIKECOUNT + 1, LIKEID = CONCAT(LIKEID, #{userId}) 
+      WHERE POST_ID = #{postId}
+   </update>
+   
+   <!-- 좋아요 취소 -->
+   <update id="unlikePost" parameterType="map">
+      UPDATE POST SET LIKECOUNT = LIKECOUNT - 1, LIKEID = REPLACE(LIKEID, #{userId}, '')
+      WHERE POST_ID = #{postId}
+   </update>
+   
+</mapper>

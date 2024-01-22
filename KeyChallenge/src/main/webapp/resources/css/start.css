@@ -1,0 +1,119 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:400");
+
+.screen {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.screen .div {
+  overflow: hidden;
+  background-image: url(../img/image.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+}
+
+.screen .union {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1285px;
+  left: -5794px;
+  object-fit: cover;
+}
+
+.screen .overlap-group {
+  position: absolute;
+  width: 1417px;
+  height: 1024px;
+  top: 0;
+  left: 0;
+}
+
+.screen .key {
+  position: absolute;
+  width: 1230px;
+  height: 1024px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.screen .p {
+  position: absolute;
+  width: 363px;
+  height: 39px;
+  top: 472px;
+  left: 1054px;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 400;
+  color: #000000c4;
+  font-size: 33px;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+.screen .text-wrapper {
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 400;
+  color: #000000c4;
+  font-size: 35px;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+.screen .span {
+  font-weight: 900;
+}
+
+.screen .button-signin {
+  position: absolute;
+  width: 218px;
+  height: 74px;
+  top: 734px;
+  left: 1169px;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.screen .button-login {
+  position: absolute;
+  width: 218px;
+  height: 74px;
+  top: 642px;
+  left: 1169px;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.screen .logo {
+  position: absolute;
+  width: 716px;
+  height: 200px;
+  top: 274px;
+  left: 665px;
+  object-fit: cover;
+}

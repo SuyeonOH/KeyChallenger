@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="model.dao.MemberMapper">
+   <insert id="create" parameterType="model.Member">
+      INSERT INTO MEMBER VALUES
+      (#{id}, #{pwd}, #{nickName}, #{birth},
+      #{character}, #{stampCount},
+      #{gender}, #{ranking})
+   </insert>
+
+   <update id="update" parameterType="model.Member">
+      UPDATE MEMBER SET pwd=#{pwd}, nickname=#{nickName}, birth=#{birth}, character=#{character}
+      WHERE id=#{id}
+   </update>
+
+   <delete id="remove" parameterType="java.lang.String">
+      DELETE FROM MEMBER WHERE
+      id=#{id}
+   </delete>
+
+   <update id="addStamp" parameterType="java.lang.String">
+      UPDATE MEMBER SET stampCount=stampCount+1 WHERE id=#{id}
+   </update>
+   
+   <update id="removeStamp" parameterType="java.lang.String">
+      UPDATE MEMBER SET stampCount=stampCount-1 WHERE id=#{id}
+   </update>
+
+   <select id="findMemberList" resultType="model.Member">
+      SELECT id, pwd, nickname,
+      birth, character, stampCount FROM MEMBER ORDER BY
+      id
+   </select>
+
+   <select id="findMemberListWithPagination"
+      parameterType="java.util.Map" resultType="model.Member">
+      SELECT id, pwd, nickname,
+      birth, character, stampCount FROM MEMBER ORDER BY
+      id LIMIT #{start},
+      #{countPerPage}
+   </select>
+
+   <select id="findMember" parameterType="model.Member"
+      resultType="model.Member">
+      SELECT * FROM MEMBER WHERE TRIM(ID) = #{id} AND PWD =
+      #{pwd}
+   </select>
+
+   <!-- 매퍼에서 회원 정보를 stamCount를 기준으로 정렬하여 가져오는 SQL -->
+   <select id="getRanking" resultType="model.Member">
+      SELECT id, nickName, stampCount FROM MEMBER ORDER BY TO_NUMBER(stampCount)
+      DESC
+   </select>
+</mapper>

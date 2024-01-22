@@ -1,0 +1,245 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+@import url("https://fonts.googleapis.com/css?family=Orbitron:700,600");
+
+.div-wrapper {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.div-wrapper .div {
+  overflow: hidden;
+  background-image: url(../img/image.png) ;
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+}
+
+.div-wrapper .image {
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  top: 35px;
+  left: 1322px;
+  object-fit: cover;
+}
+
+
+.div-wrapper .logo {
+  position: absolute;
+  width: 458px;
+  height: 128px;
+  top: 0;
+  left: 463px;
+  object-fit: cover;
+}
+
+.div-wrapper .text-wrapper2 {
+  position: absolute;
+  width: 727px;
+  height: 58px;
+  top: 150px;
+  left: 350px;
+  font-family: "Orbitron-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+.div-wrapper .character {
+  width: 150px;
+  height: 150px;
+}
+
+.div-wrapper .overlap {
+  position: absolute;
+  width: 727px;
+  height: 904px;
+  top: 14px;
+  left: 356px;
+}
+
+.div-wrapper .group {
+  position: absolute;
+  width: 570px;
+  height: 227px;
+  top: 172px;
+  left: 79px;
+}
+.div-wrapper .overlap-group {
+  position: absolute;
+  width: 634px;
+  height: 848px;
+  top: 30px;
+  left: 403px;
+}
+
+form {
+  position: absolute;
+  width: 632px;
+  height: 520px;
+  top: 328px;
+  left: 1px;
+}
+.div-wrapper .element { /*물고기*/
+  position: absolute;
+  width: 179px;
+  height: 179px;
+  top: 150px;
+  left: 50px;
+  object-fit: cover;
+}
+
+.div-wrapper .element-2 { /*테두리거북이*/
+  position: absolute;
+  width: 179px;
+  height: 179px;
+  top: 150px;
+  left: 250px;
+  object-fit: cover;
+}
+
+.div-wrapper .element-3 { /*가오리*/
+  position: absolute;
+  width: 179px;
+  height: 179px;
+  top: 150px;
+  left: 450px;
+  object-fit: cover;
+}
+
+.div-wrapper .form {
+  position: absolute;
+  width: 632px;
+  height: 520px;
+  top: 384px;
+  left: 48px;
+}
+
+.div-wrapper .birth {
+  position: absolute;
+  width: 634px;
+  height: 96px;
+  top: 424px;
+  left: 0;
+}
+
+.div-wrapper .overlap-group-2 {
+  position: relative;
+  width: 632px;
+  height: 96px;
+  border-radius: 30px;
+}
+
+.div-wrapper .id {
+  position: absolute;
+  width: 632px;
+  height: 96px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 30px;
+}
+
+.div-wrapper .rectangle {
+  position: relative;
+  width: 463px;
+  height: 79px;
+  top: 8px;
+  left: 159px;
+  background-color: #d9d9d9;
+  border-radius: 30px;
+  padding-left: 20px;
+  font-size: 30px;
+}
+
+.div-wrapper .text-wrapper {
+  position: absolute;
+  width: 134px;
+  height: 1px;
+  top: 47px;
+  left: 10px;
+  font-family: "Orbitron-Bold", Helvetica;
+  font-weight: 700;
+  color: #b3b3b3;
+  font-size: 35px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 0.1px;
+}
+
+.div-wrapper .gender {
+  position: absolute;
+  width: 634px;
+  height: 96px;
+  top: 318px;
+  left: 0;
+}
+
+.div-wrapper .nickname {
+  position: absolute;
+  width: 634px;
+  height: 96px;
+  top: 212px;
+  left: 0;
+}
+
+.div-wrapper .pwd {
+  position: absolute;
+  width: 634px;
+  height: 96px;
+  top: 106px;
+  left: 0;
+}
+
+.div-wrapper .overlap-wrapper {
+  position: absolute;
+  width: 634px;
+  height: 96px;
+  top: 0;
+  left: 0;
+}
+
+.div-wrapper .element-4 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 18px;
+  left: 28px;
+  object-fit: cover;
+}
+
+.div-wrapper .save-btn {
+  position: absolute;
+  height: 50px;
+  top: 550px;
+  left: 250px;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 5px;
+}

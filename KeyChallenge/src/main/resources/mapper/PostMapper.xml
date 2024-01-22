@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="model.dao.PostMapper">
+   <insert id="createPost" parameterType="model.Post">
+      INSERT INTO POST VALUES (#{postId}, #{activity}, #{photo}, #{review}, #{keyword}, #{date}, #{likeCount}, #{likeId}, #{id})
+   </insert>
+   
+   <update id="updatePost">
+    UPDATE POST
+    SET ACTIVITY = #{activity}, REVIEW = #{review}, PHOTO = #{photo}
+    WHERE TRIM(POST_ID) = TRIM(#{postId})
+   </update>
+
+   <delete id="deletePost">
+      DELETE FROM POST 
+      WHERE TRIM(POST_ID) = TRIM(#{postId})
+   </delete>
+   
+   <select id="findPost" parameterType="model.Post" resultType="model.Post">
+       SELECT * FROM POST WHERE TRIM(POST_ID) = #{postId}
+   </select>
+   
+   <select id="findPostsByDate" parameterType="model.Post" resultType="model.Post">
+   		SELECT * FROM POST WHERE TRIM(POSTDATE) = TRIM(#{date})
+   </select>
+</mapper>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!-- 
+	안에 순서를 지켜서 작성해야 함
+	- The content of element type "configuration" must match 
+	 "(properties?,settings?,typeAliases?,typeHandlers?,
+	 	objectFactory?,objectWrapperFactory?,reflectorFactory?,
+	 	plugins?,environments?,databaseIdProvider?,mappers?)".
+ -->
+	<!-- 연결정보 따로 생성 후 불러오기
+	<properties resource="/driver.properties"></properties>
+	-->
+	<!-- 마이바티스 설정과 관련된 기본 세팅 선언 -->
+	
+	<settings>
+		<setting name="cacheEnabled" value="false"/>
+	</settings>
+	
+	<typeAliases>
+		<typeAlias type="model.Member" alias="Member"/>
+		<typeAlias type="model.MyLikeList" alias="MyLikeList"/>
+		<typeAlias type="model.Post" alias="Post"/>
+		<typeAlias type="model.CalendarStamp" alias="Stamp"/>
+		<typeAlias type="model.Keyword" alias="Keyword"/>
+	</typeAliases>
+	
+	<environments default="development">
+      <environment id="development">
+        <transactionManager type="JDBC" />
+        <dataSource type="POOLED">
+            <property name="driver" value="oracle.jdbc.driver.OracleDriver" />
+            <property name="url" value="jdbc:oracle:thin:@dblab.dongduk.ac.kr:1521/orclpdb" />
+            <property name="username" value="dbp230107" />
+            <property name="password" value="114759" />
+        </dataSource>
+      </environment>
+	</environments>
+	<mappers>
+		<mapper resource="mapper/MemberMapper.xml" />
+		<mapper resource="mapper/MyLikeListMapper.xml" />
+		<mapper resource="mapper/PostMapper.xml" />
+		<mapper resource="mapper/StampMapper.xml" />
+		<mapper resource="mapper/KeywordMapper.xml" />
+	</mappers>
+</configuration>

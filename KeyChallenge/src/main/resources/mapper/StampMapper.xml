@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="src/main/resources/StampMapper">
+
+   <!-- 스탬프 등록 -->
+   <insert id="createStamp" parameterType="model.CalendarStamp">
+      INSERT INTO CalendarStamp (REPLY_ID, POST_ID, CONTENT)
+      VALUES (#{replyID}, #{postID}, #{content})
+   </insert>
+   
+</mapper>
